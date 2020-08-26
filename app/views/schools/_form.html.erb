@@ -1,0 +1,67 @@
+<%= form_with(model: school, local: true) do |form| %>
+  <% if school.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(school.errors.count, "error") %> prohibited this school from being saved:</h2>
+
+      <ul>
+      <% school.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Rut %>
+    <%= form.number_field :Rut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rol_data_base %>
+    <%= form.number_field :rol_data_base %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.number_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :integration %>
+    <%= form.check_box :integration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :region %>
+    <%= form.number_field :region %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comuna %>
+    <%= form.text_field :comuna %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adress %>
+    <%= form.text_field :adress %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

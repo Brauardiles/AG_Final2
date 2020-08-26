@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Rut: 1
+  rol_data_base: 1
+  name: MyString
+  type: 1
+  integration: false
+  region: 1
+  comuna: MyString
+  adress: MyString
+  phone: 1
+  email: MyString
+
+two:
+  Rut: 1
+  rol_data_base: 1
+  name: MyString
+  type: 1
+  integration: false
+  region: 1
+  comuna: MyString
+  adress: MyString
+  phone: 1
+  email: MyString
