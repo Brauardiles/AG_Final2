@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_26_223109) do
+ActiveRecord::Schema.define(version: 2020_08_26_223758) do
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "position"
+    t.string "profesion"
+    t.integer "phone"
+    t.string "i_email"
+    t.integer "mobile_phone"
+    t.string "p_email"
+    t.integer "school_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["school_id"], name: "index_contacts_on_school_id"
+  end
 
   create_table "schools", force: :cascade do |t|
     t.integer "Rut"
