@@ -13,7 +13,13 @@
     <!-- #Devise Notice -->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= link_to "ingresar", new_user_session_path %>
+    
+    <% if current_user %>
+      <%= link_to("Cerrar Sesión", destroy_user_session_path, method: :delete) %>
+      <%= link_to "Mi Perfil", edit_user_registration_path %>
+    <% else %>
+      <%= link_to "Ingresar", new_user_session_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

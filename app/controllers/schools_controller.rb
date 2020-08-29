@@ -1,4 +1,5 @@
 class SchoolsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_school, only: [:show, :edit, :update, :destroy]
 
   # GET /schools
@@ -24,7 +25,7 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
-    @school = School.new(school_params)
+    @school = School.new(school_params.merge(user: current_user))
 
     respond_to do |format|
       if @school.save
