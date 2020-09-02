@@ -61,6 +61,12 @@
     <%= form.text_field :email %>
   </div>
 
+<!-- Hidden ID -->
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.hidden_field current_user.id %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
