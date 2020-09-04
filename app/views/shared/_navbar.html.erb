@@ -8,10 +8,16 @@
       <li class="nav-item active">
         <a class="nav-link" <%= link_to "Inicio", root_path %><span class="sr-only"></span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link"<%= link_to "Inicio", root_path %></a>
-      </li>
       <% if current_user %>
+        <li class="nav-item">
+          <a class="nav-link"<%= link_to "Escuelas", schools_path %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"<%= link_to "Contactos", contacts_path %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"<%= link_to "Negocios", businesses_path %></a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" <%= link_to "Mi Perfil", edit_user_registration_path %></a>
         </li>

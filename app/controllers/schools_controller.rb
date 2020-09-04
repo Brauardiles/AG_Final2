@@ -25,7 +25,7 @@ class SchoolsController < ApplicationController
   # POST /schools
   # POST /schools.json
   def create
-    @school = School.new(school_params.merge(user_id: current_user))
+    @school = School.new(school_params)
 
     respond_to do |format|
       if @school.save
