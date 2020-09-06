@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+facebook integracion
+
+user_facebook_omniauth_callback
+<!-- https://[tu_url]/authorization/auth/facebook/callback -->

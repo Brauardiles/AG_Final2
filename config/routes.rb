@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :businesses
-  devise_for :users, controllers: { registrations: 'users/registrations' }
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    omniauth_callbacks: 'users/omniauth_callbacks'
+   }
   resources :contacts
   resources :schools
   root "schools#index"
