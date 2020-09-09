@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2020_09_06_001033) do
     t.integer "Rut"
     t.integer "rol_data_base"
     t.string "name"
-    t.integer "type"
+    t.integer "type_of_school"
     t.boolean "integration"
     t.integer "region"
     t.string "comuna"

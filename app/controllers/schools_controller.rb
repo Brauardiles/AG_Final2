@@ -70,6 +70,6 @@ class SchoolsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def school_params
-      params.require(:school).permit(:Rut, :rol_data_base, :name, :type, :integration, :region, :comuna, :adress, :phone, :email)
+      params.require(:school).permit(:Rut, :rol_data_base, :name, :type_of_school, :integration, :region, :comuna, :adress, :phone, :email)
     end
 end

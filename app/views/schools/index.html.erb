@@ -1,42 +1,39 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Ejemplo de cambio par git</h1>
+<h1>Schools</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Rut</th>
-      <th>Rol data base</th>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Integration</th>
-      <th>Region</th>
-      <th>Comuna</th>
-      <th>Adress</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th colspan="3"></th>
+      <th scope="col">Rut</th>
+      <th scope="col">Rol data base</th>
+      <th scope="col">Name</th>
+      <th scope="col">Type</th>
+      <th scope="col">Integration</th>
+      <th scope="col">Region</th>
+      <th scope="col">Comuna</th>
+      <th scope="col">Adress</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Email</th>
     </tr>
   </thead>
-
   <tbody>
     <% @schools.each do |school| %>
-      <tr>
-        <td><%= school.Rut %></td>
-        <td><%= school.rol_data_base %></td>
-        <td><%= school.name %></td>
-        <td><%= school.type %></td>
-        <td><%= school.integration %></td>
-        <td><%= school.region %></td>
-        <td><%= school.comuna %></td>
-        <td><%= school.adress %></td>
-        <td><%= school.phone %></td>
-        <td><%= school.email %></td>
-        <td><%= school.user_id %></td>
-        <td><%= link_to 'Show', school %></td>
-        <td><%= link_to 'Edit', edit_school_path(school) %></td>
-        <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr>
+      <td><%= school.Rut %></td>
+      <td><%= school.rol_data_base %></td>
+      <td><%= school.name %></td>
+      <td><%= school.type_of_school %></td>
+      <td><%= school.integration %></td>
+      <td><%= school.region %></td>
+      <td><%= school.comuna %></td>
+      <td><%= school.adress %></td>
+      <td><%= school.phone %></td>
+      <td><%= school.email %></td>
+      <td><%= link_to 'Show', school %></td>
+      <td><%= link_to 'Edit', edit_school_path(school) %></td>
+      <td><%= link_to 'Destroy', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>

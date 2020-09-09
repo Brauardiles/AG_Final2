@@ -12,4 +12,7 @@ class User < ApplicationRecord
       user.Nickname = auth.info.name
     end
   end
+
+  has_many :businesses
+  has_many :contacts, through: :businesses
 end
