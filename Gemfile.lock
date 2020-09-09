@@ -87,6 +87,8 @@ GEM
     duktape (2.3.0.0)
     erubi (1.9.0)
     execjs (2.7.0)
+    faker (2.13.0)
+      i18n (>= 1.6, < 2)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.13.1-x64-mingw32)
@@ -230,6 +232,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   duktape
+  faker
   jbuilder (~> 2.5)
   omniauth-facebook
   puma (~> 3.11)

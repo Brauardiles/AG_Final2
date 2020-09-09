@@ -6,7 +6,7 @@ class School < ApplicationRecord
   validates :comuna, presence: true
   validates :email, presence: true
 
-  has_many :contacts
+  has_many :contacts, dependent: :destroy
   enum type_of_school: [:public_school, :mixed_school, :private_school]
 
   def to_s
