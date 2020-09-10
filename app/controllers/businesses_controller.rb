@@ -5,6 +5,8 @@ class BusinessesController < ApplicationController
   # GET /businesses.json
   def index
     @businesses = Business.all
+    @potential_business_by_day = Business.group_by_day(:created_at, last: 30).sum(:amount)
+    @volume_business_by_day = Business.group_by_day(:created_at, last: 30).count
   end
 
   # GET /businesses/1
@@ -54,10 +56,14 @@ class BusinessesController < ApplicationController
   # DELETE /businesses/1
   # DELETE /businesses/1.json
   def destroy
-    @business.destroy
-    respond_to do |format|
-      format.html { redirect_to businesses_url, notice: 'Business was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user.admin?
+      @business.destroy
+      respond_to do |format|
+        format.html { redirect_to businesses_url, notice: 'Business was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to business_path, notice: "Solo el administrador puede borrar Negocios"
     end
   end
 

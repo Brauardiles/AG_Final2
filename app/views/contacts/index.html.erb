@@ -2,6 +2,8 @@
 
 <h1>Contacts</h1>
 
+<%= line_chart Contact.group_by_day(:created_at).count %>
+
 <table>
   <thead>
     <tr>

@@ -55,10 +55,14 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.json
   def destroy
-    @contact.destroy
-    respond_to do |format|
-      format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user.admin?
+      @contact.destroy
+      respond_to do |format|
+        format.html { redirect_to contacts_url, notice: 'Contact was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to business_path, notice: "Solo el administrador puede borrar Contactos"
     end
   end
 

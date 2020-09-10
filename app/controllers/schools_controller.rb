@@ -55,10 +55,14 @@ class SchoolsController < ApplicationController
   # DELETE /schools/1
   # DELETE /schools/1.json
   def destroy
-    @school.destroy
-    respond_to do |format|
-      format.html { redirect_to schools_url, notice: 'School was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user.admin?
+      @school.destroy
+      respond_to do |format|
+        format.html { redirect_to schools_url, notice: 'School was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to schools_path, notice: "Solo el administrador puede borrar Escuelas"
     end
   end
 

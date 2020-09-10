@@ -2,6 +2,8 @@
 
 <h1>Schools</h1>
 
+<%= pie_chart School.group(:type_of_school).count %>
+
 <table class="table">
   <thead>
     <tr>
