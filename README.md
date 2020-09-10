@@ -6,8 +6,13 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+  ruby-2.6.5
+
+* Rails version
+  rails -v 5.2.4.1
 
 * System dependencies
+   yarn add highcharts
 
 * Configuration
 
