@@ -13,13 +13,21 @@ Things you may want to cover:
 
 * System dependencies
    yarn add highcharts
+   gem devise for model users
+   gem 'omniauth-facebook'
+   Optional gem 'faker'
+   gem 'chartkick'
+   gem 'groupdate'
+   gem 'pg', group: :production
+
 
 * Configuration
 
 * Database creation
-
+  db:seed
+  optional gem 'faker'
 * Database initialization
-
+  rails db:seed
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
@@ -30,4 +38,4 @@ Things you may want to cover:
 facebook integracion
 
 user_facebook_omniauth_callback
-<!-- https://[tu_url]/authorization/auth/facebook/callback -->
+<!-- https://lit-sea-38867.herokuapp.com/authorization/auth/facebook/callback -->

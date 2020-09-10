@@ -12,7 +12,7 @@ gem 'omniauth-facebook'
 gem 'faker'
 
 #deployment
-gem 'webpacker'
+# gem 'webpacker'
 #graficos
 gem 'chartkick'
 gem 'groupdate'
