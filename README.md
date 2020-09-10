@@ -9,7 +9,7 @@ Things you may want to cover:
   ruby-2.6.5
 
 * Rails version
-  rails -v 5.2.4.1
+  rails -v 5.2.4.3
 
 * System dependencies
    yarn add highcharts
@@ -33,9 +33,4 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-facebook integracion
-
-user_facebook_omniauth_callback
-<!-- https://lit-sea-38867.herokuapp.com/authorization/auth/facebook/callback -->
+  heroku for deployment
