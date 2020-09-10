@@ -11,6 +11,8 @@ gem 'omniauth-facebook'
 #seed
 gem 'faker'
 
+#deployment
+gem 'webpacker'
 #graficos
 gem 'chartkick'
 gem 'groupdate'
